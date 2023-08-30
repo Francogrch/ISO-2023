@@ -827,7 +827,6 @@ Estos son algunos de los parámetros más comunes para estos comandos. Cada uno 
 
 Estos son algunos de los comandos y sus parámetros más utilizados en sistemas GNU/Linux. Cada uno tiene funcionalidades adicionales que puedes explorar utilizando `man comando` en la terminal para obtener más detalles.
 
-## 12. Indique en que directorios se almacenan los comandos mencionados en el ejercicio anterior
 
 ## 12. Indique en que directorios se almacenan los comandos mencionados en el ejercicio anterior
 
