@@ -26,7 +26,7 @@ El proceso INIT lo ejecuta el kernel y es el encargado de cargar todos los subpr
 El comando pstree muestra en pantalla los directorios en formato de arbol.
 
 ### Punto d
-Los Runlevels el el encargado de iniciar o parar una serie de servicios. Sirve para categorizar el estado del SO. Se dividen en 7 niveles.
+Los Runlevels son los encargado de iniciar o parar una serie de servicios. Sirve para categorizar el estado del SO. Se dividen en 7 niveles.
 ### Punto e
 Existen 7, y permiten iniciar un conjunto de procesos al arranque o apagado del sistema
 Segun el estandar:
@@ -40,9 +40,19 @@ Segun el estandar:
 En /etc/inittab se encuentra donde se define que Runlevel ejecutar al inciar el SO.
 No todas las distribuciones respetan estos estandares.
 ### Punto f
-La finalidad del archivo /etc/inittab es la de contener los procesos que se van a ejecutar de a cuerdo a al entrada en inittab .La estructura es: 
+La finalidad del archivo /etc/inittab es definir que Runlevel se va a ejecutar.La estructura es: 
 id:NivelDeEjecucion:Accion:Proceso
 ### Punto g
+sudo init <\Y>
+El cambio no es permantente ya que cuando se reinice la pc, a volver a cargar el inittab, volveria al RunLevel X.
+### Punto h
+La finalidad es la de saber que procesos se tienen que lanzar al momento de apagar, y de prender la pc, de acuerdo al runlevel. Estos se almacenan en /etc/rcX.d , siendo x el nivel de runLevel.
+Debido a que el formato es de esta manera:
+        
+        [S|K]<orden><nombreScript>
 
-### Punto b
-### Punto b
+El orden, y en que momento ejecutar cada script esta definido en el formato.
+S de start. K de kill(apagado).
+
+### Punto i
+El insserv se utiliza para administrar el orden de los enlaces simboliscos de los Scripts RC.
