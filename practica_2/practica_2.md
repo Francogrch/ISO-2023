@@ -56,3 +56,65 @@ S de start. K de kill(apagado).
 
 ### Punto i
 El insserv se utiliza para administrar el orden de los enlaces simboliscos de los Scripts RC.
+El beneficio principal es la capacidad de modificar facilmente la cantidad de scripts que se ejecutan al prender o apagar la pc.
+
+### Punto j
+El Upstarts maneja el arranque mediante jobs, que se ejecutan de manera asincronica. 
+
+### Punto k
+SystemV funciona de manera secuencial y sincronica, mientras que Upstart de manera asicronica, oriendado a eventos.
+El primero las depencias hay que especificarlas, mientras que en Upstart esto lo hace automaticamete.
+Ademas Upstart tiene mas registros sobre los eventos, por ende es mas facil el mantenimiento.
+
+### Punto l
+En Upstart se le llaman Jobs, que es un conjunto o un script en particular y se encuntra en /etc/init.d
+
+### Punto m
+Las primeras tres lineas es sobre informacion del Job. Tanto del nombre, en comentario, descripcion y el autor del mismo
+Luego especifica que job tiene ejecutar de a cuerdo a los runlevels que nombra.
+Y por ultimo el ejecutable.
+
+### Punto n
+El systemd es un proceso de arranque que centraliza la administracion de demonios y de librerias del sistema.
+El control de dependencias de manera logica, y en ves de solo cargar las dependencias necesaria carga un grupo de dependencias anteriormente definido. Mejora el paralelismo del booteao.
+
+### Punto enie
+Hace referencia a la posibilidad de no tener cargado los scripts en memoria y solamente cargarlos al momento de activar un socket, o conectar algun dispisitivo.
+
+### Punto o
+El cgroup organiza el conjunto de procesos, de manera jerarquica tal que al momento de necesitar algun otro proceso, se cargue un grupo de procesos que psoiblemente se vayan a utilizar.
+
+
+## Punto 3
+
+### Punto a
+Claro, aquí tienes la respuesta más concisa:
+
+En un sistema GNU/Linux, los archivos clave utilizados para guardar información de los usuarios son:
+
+1. `/etc/passwd`: Contiene información básica de los usuarios.
+2. `/etc/shadow`: Almacena contraseñas cifradas.
+3. `/etc/group`: Guarda información sobre grupos de usuarios.
+4. `/home`: Directorio donde se encuentran los directorios de inicio de los usuarios.
+5. `/var/spool/mail` y `/var/mail`: Almacenan buzones de correo si el sistema utiliza correo local.
+6. `/var/log`: Registros del sistema, incluyendo registros de inicio de sesión de usuarios y eventos del sistema.
+   
+Estos archivos y directorios son fundamentales en la gestión de usuarios y grupos en el sistema.
+
+### Punto b
+Hacen referiencia a los ID de los usuarios y a los ID de los grupos. Y estos son unicos no pueden repetirse, hay casos donde esto puede ocurrir, pero va a depender del sistema, si es que maneja de mala manera los permisos.
+
+### Punto c
+El usuario root es el usario con mas privilegios y permisos del sistema, y solamente existe un solo root, la UID es la 0.
+
+### Pundo d
+groupadd catedras
+usueradd -u iso2017 -d /home/iso_2017 -g catedra
+su
+cd /home/iso_2017
+touch hello.py
+userdel -r iso2017
+
+### Punto e
+
+
